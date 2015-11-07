@@ -33,10 +33,15 @@ var mysql           = require('mysql');
 
 //######### request example for crawling ################
 // request('http://www.booking.com').pipe(process.stdout)
+var writefilePath = path.join(__dirname, '../../client/assets/dataDir/test.html'),
+    myFile = fs.createWriteStream(writefilePath);
+
+request('http://www.asos.com').pipe(myFile);
 
 //########## fs module example use #####################
-var filePath = path.join(__dirname, '../../client/assets/dataDir/102-24.csv');
-fs.readFile(filePath,function (err, data) {
+var getfilePath = path.join(__dirname, '../../client/assets/dataDir/102-24.csv');
+
+fs.readFile(getfilePath,function (err, data) {
   if (err) throw err;
   console.log(data.toString());
  });
