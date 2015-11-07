@@ -1,0 +1,99 @@
+ <!-- ###################### HEADER #################################### -->
+<!-- Toolbars or Navbars -->
+<div ng-include="'components/navbar/navbar.html'"></div>   
+
+<!-- ################## END OF HEADER ################################# -->
+
+
+<!-- ################## MAIN CONTAINER ################################ -->
+<div class="container">
+  <div class="col-md-12">
+    <h1>Polymer Playground</h1>
+      <div>Various polymer understanding</div>
+
+    
+         <!-- #########################################  Email sent with nodemailer  ################################### -->
+  
+  <!-- Pop email modal to send email -->
+  <h4>Email Box</h4>
+
+  <!-- Paper dialog will be displayed on click -->
+  <paper-dialog transition="core-transition-center" id="emailModal" backdrop closeSelector="[affirmative]" resizerIsPeer=false>
+     <!-- <input type="text" ng-model="myData" /> -->
+         <!-- *************************add task top card*************************** -->
+          <div class = "todoTask" >   
+            <div class="emailCardHead">Compose: 
+            </div>    
+            <div class = "cardBody">
+              <form horizontal layout >
+                <div>
+                <div>
+                  <paper-input-decorator label="To: " class="inputEmail" id="mailTo" error="Value must start with a number!">
+                     <input id="taskName" ng-model="formdata.mailTo" is="core-input">
+                     </paper-input-decorator>
+                 </div>
+                <div class="inputEmail">
+                  <paper-input-decorator label="Subject:" class="inputEmail" id="mailSubject" error="Value must start with a number!">
+                     <input id="taskDesc" ng-model="formdata.mailSubject" is="core-input">
+                     </paper-input-decorator>
+                     <p id="errMsg"></p>
+                 </div>
+                <div>
+                  <paper-autogrow-textarea label=" " id="a1">
+                    <textarea class="textAreaClass" id="t1" ng-model="formdata.mailText" placeholder="write short email"></textarea>
+                  </paper-autogrow-textarea>
+                 </div>
+                  <!-- use local ajax -->
+                  <div class="buttonAdd">
+                  <paper-button raised affirmative class="emailBtn" ng-click="sendMail()">Send</paper-button>
+                  <paper-button raised dismissive class="emailDraftBtn" ng-click="saveMail()">Draft</paper-button>
+                  <!-- use firebase connection -->
+                   <!-- <button on-click="{{addGoal}}">Add Goal</button> -->
+                  </div>
+                 </div>
+               </form>
+              </div>      
+              <div class = "cardFooterAdd" >
+               </div>   
+          </div>
+  </paper-dialog>
+  <!-- ***************************************************************************** -->
+
+  <button ng-click="mailModal()">Email Box</button>
+
+  <!-- ************************************************************************************************************* -->
+
+  <!-- ********************* Socket IO active demonstration ************************* -->
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
+        <li>
+          <a href="#" tooltip="{{thing.info}}">{{thing.name}}
+            <button type="button" class="close" ng-click="deleteThing(thing)">&times;</button>
+          </a>
+        </li>
+       </ul>
+     </div>
+
+      <form class="thing-form">
+      <label>Syncs in realtime across clients</label>
+      <p class="input-group">
+        <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
+        </span>
+      </p>
+     </form>
+  <!-- ********************* Socket IO active demonstration ************************* -->
+    </div>
+ </div>
+<!-- ################## END OF MAIN CONTAINER ######################### -->
+
+<!-- ################## FOOTER ######################################## -->
+<footer class="footer">
+  <div class="container">
+      <p>angular-fullstack-base |
+        <a href="https://twitter.com/merumman">@merumman</a> |
+         <a href="https://github.com/knofler/angular-fullstack-base/issues">Issues</a></p>
+  </div>
+ </footer>
+<!-- ################## END OF FOOTER ################################# -->

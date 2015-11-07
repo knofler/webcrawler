@@ -1,0 +1,22 @@
+<div class="container" nv-file-drop="" uploader="uploader">
+    <div class="col-md-12">
+        <div ng-show="uploader.isHTML5">
+            <!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+            <div nv-file-drop="" uploader="uploader" options="{ url: '/uploads/{{data.model}}' }" id="filedrop">
+                <div nv-file-over="" uploader="uploader" over-class="another-file-over-class dropbox" class="well my-drop-zone" >
+                    <span class="dropbox">Drop CSV File here to view</span>
+                </div>
+             </div>
+         </div>
+        <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+        <input type="file" nv-file-select="" class="fileselect" uploader="uploader" multiple  /><br/>
+     </div>
+</div>
+<!-- Used csv directive to create display from droped csv -->
+<csv url="url"></csv>
+
+
+
+
+
+ 

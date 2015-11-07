@@ -1,0 +1,13 @@
+.vChatDiv{
+	/*margin-top: 10px;*/
+	padding: 10px;
+	clear: both;
+	max-width: 1010px;
+	width: 100%;
+	min-height: 350px;
+	height: auto;
+	/*background-color: green;*/
+	border:1px solid #ddd;
+	border-radius: 5px;
+
+}

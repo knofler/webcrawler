@@ -1,0 +1,49 @@
+ <!-- ###################### HEADER #################################### -->
+<!-- Toolbars or Navbars -->
+<div ng-include="'components/navbar/navbar.html'"></div>   
+
+<!-- ################## END OF HEADER ################################# -->
+
+
+<!-- ################## MAIN CONTAINER ################################ -->
+<div class="container">
+  <div class="col-md-12">
+    <h1>ReactJS Playground</h1>
+      <div>Various React understanding</div>
+
+
+  <!-- ********************* React component ************************* -->
+      
+      <!-- ############ Example-1 -->
+      <h1>Fast AngularJs</h1> 
+      <h3>AngularJs with ReactJs</h3>
+      <input ng-model = "framework"/>
+      <fast-ng framework = "framework"></fast-ng>
+      
+      <div>Rendering with traditional AngularJs {{framework}}</div>
+
+
+      <!-- ############ Example-2 -->
+      <!-- <fast-repeat data="data"></fast-repeat> -->
+   
+
+  <!-- ********************* React component ************************* -->
+
+  
+  <!-- ##############  Insert custom directive here  ############ -->
+    <custdir data=scopedata on-tap="showMsg(arg)">Check out the data from transclude : {{transcludeVar}}</custdir>
+  <!-- ***************************************************************************** -->
+  </div>
+ </div>
+<!-- ################## END OF MAIN CONTAINER ######################### -->
+
+
+<!-- ################## FOOTER ######################################## -->
+<footer class="footer">
+  <div class="container">
+      <p>angular-fullstack-base |
+        <a href="https://twitter.com/merumman">@merumman</a> |
+         <a href="https://github.com/knofler/angular-fullstack-base/issues">Issues</a></p>
+  </div>
+ </footer>
+<!-- ################## END OF FOOTER ################################# !-->

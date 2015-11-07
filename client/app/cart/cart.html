@@ -1,0 +1,38 @@
+ <!-- ###################### HEADER ################################# -->
+<div ng-include="'components/navbar/navbar.html'"></div>   
+ <!-- ###################### HEADER ################################# -->
+
+<!-- ################## BODY ######################################## -->
+<div class="container">
+    <div class="col-md-12">
+    <h1>[ Cart ]</h1>
+    <!-- ################################## Insert customdirective here ########################## -->
+      <cart data="cart_display"></cart>
+    <!-- ################################## Insert customdirective here ########################## -->  
+     <!-- Deploye stripe button here -->
+<!--        <form action="/charge" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_mp6CNGQG20olcy2ELIupR4Q7"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-name="Aircanteen"
+            data-description="2 widgets"
+            data-currency="aud"
+            data-amount="2000"
+            data-locale="auto">
+          </script>
+        </form> -->
+
+    </div>
+ </div>
+<!-- ################## BODY ######################################## -->
+
+<!-- ################## FOOTER ###################################### -->
+<footer class="footer">
+  <div class="container">
+      <p>Air canteen |
+        <a href="https://twitter.com/merumman">@merumman</a> |
+         <a href="https://github.com/knofler/aircanteen/issues">Issues</a></p>
+  </div>
+ </footer>
+<!-- ################## END OF FOOTER ############################### -->

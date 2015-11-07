@@ -1,0 +1,38 @@
+ <!-- ###################### HEADER ################################# -->
+<div ng-include="'components/navbar/navbar.html'"></div>   
+ <!-- ###################### HEADER ################################# -->
+
+<!-- ################## BODY ######################################## -->
+<div class="container" id="canteenview">
+  	<div class="col-md-12">
+		<h1>[ Checkout ]</h1>
+		<!-- ################################## Insert customdirective here ########################## -->
+			<checkout source='order_display'></checkout>
+
+      <!-- ############ Stripe Basic checkout ############### -->
+      <stripe-basic total="totalCost*100"></stripe-basic> 
+
+      <!-- ######### INVOICE DIRECTIVE ############ -->
+      <div class="ctrpnl">
+        <button class="btn btn-success" ng-click="invoiceModal()">Invoice</button>
+      </div>
+		<!-- ################################## Insert customdirective here ########################## -->  
+	  </div>
+ </div>
+<!-- ################## BODY ######################################## -->
+
+<!-- ################## FOOTER ###################################### -->
+<footer class="footer">
+  <div class="container">
+      <p>Air canteen |
+        <a href="https://twitter.com/merumman">@merumman</a> |
+         <a href="https://github.com/knofler/aircanteen/issues">Issues</a></p>
+  </div>
+ </footer>
+<!-- ################## END OF FOOTER ############################### -->
+
+<!-- ################### MODAL DIALOG ########################## -->
+ <modals show='modalShown' width="600px">
+   <invoice></invoice>
+ </modals>
+<!-- ################### MODAL DIALOG ########################## -->

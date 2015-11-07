@@ -1,0 +1,19 @@
+.leftChatDiv{
+	float: left;
+	clear: right;
+	display: inline-block;
+	min-width: 400px;
+	margin-left: 0px;
+	width:40%;
+	margin-bottom: 10px;
+	/*background-color: red;*/
+}
+.rightChatDiv{
+	margin-top: 14px;
+	display: inline-block;
+	min-width: 400px;
+	width:50%;
+	/*margin-left: 100px;*/
+	margin-bottom: 10px;
+	/*background-color: grey;*/
+}
